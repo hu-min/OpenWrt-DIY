@@ -6,3 +6,4 @@ sed -i '/parts\[0\].mask_flags/d' target/linux/ar71xx/files/drivers/mtd/tplinkpa
 sed -i '/parts\[3\].mask_flags/d' target/linux/ar71xx/files/drivers/mtd/tplinkpart.c
 sed -i 's/192.168.1.1/192.168.1.254/g' package/base-files/files/bin/config_generate
 sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
+sed -i 's/# CONFIG_ALL .*/CONFIG_ALL=y/' .config
