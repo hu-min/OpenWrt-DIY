@@ -1,4 +1,4 @@
-name: 编译OpenWrt固件
+name: 编译OpenWrt固件（TEST）
 # 触发选项
 on:
   #  push:
