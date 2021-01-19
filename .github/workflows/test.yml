@@ -120,6 +120,11 @@ jobs:
           make download -j8
           find dl/ -size -1024c -exec rm -f {} \;
 
+      # SSH连接
+      - name: SSH Connection
+        if: env.SSH_ACTION == 'true'
+        uses: hu-min/debugger-action@master
+
       # 编译固件
       - name: Compile Firmware
         id: compile
@@ -133,11 +138,6 @@ jobs:
           df -h
           echo "======================="
           echo "::set-output name=status::success"
-
-      # SSH连接
-      - name: SSH Connection
-        if: env.SSH_ACTION == 'true'
-        uses: hu-min/debugger-action@master
 
       # 准备固件
       - name: Organize Artifact
