@@ -88,9 +88,9 @@ jobs:
       # 自定插件
       - name: Download My Package
         run: |
-          chmod +x script/$DIY0_FILE
+          chmod +x scripts/$DIY0_FILE
           cd openwrt
-          ../script/$DIY0_FILE
+          ../scripts/$DIY0_FILE
 
       # 更新Feed
       - name: Update Feeds
