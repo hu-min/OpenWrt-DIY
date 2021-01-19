@@ -108,9 +108,9 @@ jobs:
         run: |
           [ -e files ] && cp -r -f files openwrt/files
           [ -e config/$CONF_FILE ] && cp -r -f config/$CONF_FILE openwrt/.config
-          chmod +x script/$DIY1_FILE
+          chmod +x scripts/$DIY1_FILE
           cd openwrt
-          ../script/$DIY1_FILE
+          ../scripts/$DIY1_FILE
           make defconfig
 
       # 下载依赖
